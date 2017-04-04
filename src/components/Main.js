@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 
 class Main extends Component {
+  constructor() {
+    super();
+    this.state = {
+      moodType: null
+    }
+  }
+
   render() {
     return (
       <div className="main">
         <div className="container">
-          <div className="row">
-
-            <div className="col s12">
-              <p>Hello World</p>
-            </div>
-
-          </div>
+          <p>Hello World</p>
+          <Link to="/display/sad">Display</Link>
         </div>
       </div>
     )
