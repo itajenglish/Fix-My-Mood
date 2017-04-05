@@ -10,9 +10,15 @@ class Main extends Component {
   }
 
   componentWillMount() {
-    if (!this.state.name ){
+    //Check if the name is in location
+    let name = localStorage.getItem('name')
+
+    if (!name){
       const name_prompt = prompt('What is your name?');
+      localStorage.setItem('name', name_prompt);
       this.setState({name: name_prompt})
+    } else {
+      this.setState({name})
     }
   }
 
