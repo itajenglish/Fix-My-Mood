@@ -16,8 +16,8 @@ class Display extends Component {
       case 'happy': {
         API.happySongs()
         .then(response => {
-          console.log(response)
-          this.setState({isLoading: false });
+          this.setState({isLoading: false, songs: response.data});
+          console.log(this.state);
         })
       break;
     }
@@ -25,7 +25,7 @@ class Display extends Component {
         API.sadSongs()
         .then(response => {
           console.log(response)
-          this.setState({isLoading: false });
+          this.setState({isLoading: false, songs: response.data});
         })
         break;
       }
@@ -33,7 +33,7 @@ class Display extends Component {
         API.angrySongs()
         .then(response => {
           console.log(response)
-          this.setState({isLoading: false });
+          this.setState({isLoading: false, songs: response.data});
         })
         break;
       }
@@ -43,15 +43,39 @@ class Display extends Component {
   }
   
   renderSongs(){
-    return (
-      <h1>Songs</h1>
-    )
+    return this.state.songs.map((songs, key) => {
+      return (
+        <div className="card horizontal small" key={key}>
+          <div className="card-image">
+            <a href={songs.permalink_url} target="_blank">
+              <img src={songs.artwork_url} alt={`${songs.title}'s`} />
+            </a>
+          </div>
+          <div className="card-stacked">
+            <div className="card-content">
+              <h3>{songs.title}</h3>
+              <a href={songs.user.permalink_url} target="_blank">@{songs.user.username}</a>
+              <p></p>
+            </div>
+            <div className="card-action">
+              <a href="#">
+                This is a link
+              </a>
+            </div>
+          </div>
+        </div>
+      )
+    })
   }
   
   render() {
     return(
-      <div>
-        {this.state.isLoading ? <Spinner /> : this.renderSongs()}    
+      <div className="container center">
+        <div className="row" >
+          <div className="col s12">
+            {this.state.isLoading ? <Spinner /> : this.renderSongs()}    
+          </div>
+        </div>
       </div>
     )
   }
