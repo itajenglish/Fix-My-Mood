@@ -1,11 +1,12 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import API from '../utils/api';
-
+import Spinner from 'react-spinjs';
 class Display extends Component {
   constructor() {
     super();
     this.state = {
-      songs: []
+      songs: [],
+      isLoading: true
     }
   }
 
@@ -16,6 +17,7 @@ class Display extends Component {
         API.happySongs()
         .then(response => {
           console.log(response)
+          this.setState({isLoading: false });
         })
       break;
     }
@@ -23,6 +25,7 @@ class Display extends Component {
         API.sadSongs()
         .then(response => {
           console.log(response)
+          this.setState({isLoading: false });
         })
         break;
       }
@@ -30,6 +33,7 @@ class Display extends Component {
         API.angrySongs()
         .then(response => {
           console.log(response)
+          this.setState({isLoading: false });
         })
         break;
       }
@@ -37,10 +41,19 @@ class Display extends Component {
       return null;
     }
   }
-
+  
+  renderSongs(){
+    return (
+      <h1>Songs</h1>
+    )
+  }
+  
   render() {
-    console.log(this.props)
-    return null
+    return(
+      <div>
+        {this.state.isLoading ? <Spinner /> : this.renderSongs()}    
+      </div>
+    )
   }
 
 }
