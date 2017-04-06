@@ -36,11 +36,11 @@ class Main extends Component {
             </div>
 
             <div className="col s4">
-              <Link className="btn waves-effect waves-light blue" to="/display/sad">I'm in a happy mood 😁</Link>
+              <Link className="btn waves-effect waves-light blue" to="/display/happy">I'm in a happy mood 😁</Link>
             </div>
 
             <div className="col s4">
-              <Link className="btn waves-effect waves-light red" to="/display/sad">I'm in a angry mood 😡</Link>
+              <Link className="btn waves-effect waves-light red" to="/display/angry">I'm in a angry mood 😡</Link>
             </div>
 
           </div>

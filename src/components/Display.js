@@ -1,19 +1,36 @@
 import { Component } from 'react';
+import API from '../utils/api';
 
 class Display extends Component {
+  constructor() {
+    super();
+    this.state = {
+      songs: []
+    }
+  }
 
   componentWillMount(){
+    //Render Current Songs By Params In URL Route.
     switch(this.props.match.params.mood){
       case 'happy': {
-      console.log('Happy Day');
+        API.happySongs()
+        .then(response => {
+          console.log(response)
+        })
       break;
     }
       case 'sad': {
-        console.log('oh sad day!');
+        API.sadSongs()
+        .then(response => {
+          console.log(response)
+        })
         break;
       }
       case 'angry': {
-        console.log('Ohh fuck!');
+        API.angrySongs()
+        .then(response => {
+          console.log(response)
+        })
         break;
       }
       default:
