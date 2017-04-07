@@ -48,19 +48,21 @@ class Display extends Component {
         <div className="card horizontal small" key={key}>
           <div className="card-image">
             <a href={songs.permalink_url} target="_blank">
-              <img src={songs.artwork_url} alt={`${songs.title}'s`} />
+              <img src={songs.artwork_url} alt={songs.title} />
             </a>
           </div>
           <div className="card-stacked">
             <div className="card-content">
               <h3>{songs.title}</h3>
               <a href={songs.user.permalink_url} target="_blank">@{songs.user.username}</a>
-              <p></p>
+              <br/>
+              <img src={songs.waveform_url} alt={songs.title} style={{height: '80px', backgroundColor: 'orange'}}/>
             </div>
             <div className="card-action">
-              <a href="#">
-                This is a link
-              </a>
+              <audio controls="controls" src={`${songs.stream_url}?client_id=d6i0wruU7ddayTqrhwszluW0i9aNBlb1`}>
+                Your browser does not support the <code>audio</code> element.
+              </audio>
+      
             </div>
           </div>
         </div>
