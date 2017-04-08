@@ -11,6 +11,7 @@ class Display extends Component {
   }
 
   componentWillMount(){
+    console.log(this.props)
     //Render Current Songs By Params In URL Route.
     switch(this.props.match.params.mood) {
       case 'happy': {
