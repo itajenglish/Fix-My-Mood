@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "custom-react-scripts": "0.0.23"
+    "chai": "^3.5.0",
+    "custom-react-scripts": "0.0.23",
+    "enzyme": "^2.8.0",
+    "react-dom": "^15.5.3"
   },
   "dependencies": {
     "axios": "^0.16.0",
