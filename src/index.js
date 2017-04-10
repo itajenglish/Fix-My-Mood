@@ -6,7 +6,6 @@ import Display from './components/Display';
 import './index.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
-// const createBrowserHistory = require('history').createBrowserHistory
 
 const history = createBrowserHistory()
 
