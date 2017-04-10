@@ -14,6 +14,7 @@ Enjoy :D
 
 ### Testing Instructions
 `Run $ npm test`
+`Press A To Run All Tests`
 
 ### Technologies used:
 - React
