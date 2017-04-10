@@ -1,7 +1,8 @@
 # Fix-My-Mood-App
 
-React App For Generating Songs From Soundcloud API Based On Your Mood.
-App Uses The BPM Parameters Of The Tracks Endpoint - https://developers.soundcloud.com/docs/api/reference#tracks
+## React App For Generating Songs From Soundcloud API Based On Your Mood.
+
+## App Uses The BPM Parameters Of The Tracks Endpoint - https://developers.soundcloud.com/docs/api/reference#tracks
 ------------
 ### Setup Instructions
 ```
