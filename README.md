@@ -8,6 +8,7 @@ App Uses The BPM Parameters Of The Tracks Endpoint - https://developers.soundclo
 Run $ npm install inside root folder
 Run $ npm start
 Enjoy :D
+Deployed Version - https://fix-my-mood.herokuapp.com/
 ```
 ### Testing Instructions
 `Run $ npm test`
