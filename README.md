@@ -1,15 +1,21 @@
 #Fix-My-Mood-App
 
-React App For Generation Songs From Soundcloud Based On Your Mood.
-------------mjjjj
+React App For Generating Songs From Soundcloud Based On Your Mood.
+------------
 ### Setup Instructions
 ```
 Run $ npm install inside root folder
-Run $ npm startjbj
+Run $ npm start
 Enjoy jkj:D
-```mk
+```
+### Testing Instructions
+`Run $ npm test`
 
 ### Technologies used:
 - React
 - react-spinjs
 - Axios
+- Soundcloud Api
+- Jest
+- Enzyme
+- React Router v4
