@@ -5,8 +5,8 @@ import Main from './components/Main';
 import Display from './components/Display';
 import './index.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// Import from 'history/createBrowserHistory' doesn't work with create-react-app
-const createBrowserHistory = require('history').createBrowserHistory
+import createBrowserHistory from 'history/createBrowserHistory';
+// const createBrowserHistory = require('history').createBrowserHistory
 
 const history = createBrowserHistory()
 
