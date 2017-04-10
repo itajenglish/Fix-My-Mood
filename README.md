@@ -1,4 +1,4 @@
-#Fix-My-Mood-App
+# Fix-My-Mood-App
 
 React App For Generating Songs From Soundcloud Based On Your Mood.
 ------------
@@ -6,7 +6,7 @@ React App For Generating Songs From Soundcloud Based On Your Mood.
 ```
 Run $ npm install inside root folder
 Run $ npm start
-Enjoy jkj:D
+Enjoy :D
 ```
 ### Testing Instructions
 `Run $ npm test`
