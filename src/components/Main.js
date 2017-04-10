@@ -26,7 +26,7 @@ class Main extends Component {
     return (
       <div className="main">
         <div className="container center">
-          <h3>{`Hello ${this.state.name} Click the button that represents your mood!`}</h3>
+          <h3>{`Hi ${this.state.name}, Sometimes a good song can fix your mood. Click the button that represents your current mood!`}</h3>
           <hr/>
           <br/>
           <div className="row">

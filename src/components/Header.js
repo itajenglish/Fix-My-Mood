@@ -12,7 +12,7 @@ render() {
   return (
       <nav>
         <div className="nav-wrapper orange">
-          <Link to="/" className="brand-logo center">Fix My Mood</Link>
+          <Link to="/" className="brand-logo center">🎵Fix My Mood🎵</Link>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li><a className="btn red" onClick={() => this.changeName()}>Change Name</a></li>
           </ul>
