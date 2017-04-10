@@ -14,8 +14,8 @@ class Display extends Component {
     console.log(this.props)
     //Render Current Songs By Params In URL Route.
     switch(this.props.match.params.mood) {
-      case 'happy': {
-        API.happySongs()
+      case 'angry': {
+        API.sadSongs()
         .then(response => {
           this.setState({isLoading: false, songs: response.data});
           console.log(this.state);
@@ -23,15 +23,15 @@ class Display extends Component {
       break;
     }
       case 'sad': {
-        API.sadSongs()
+        API.happySongs()
         .then(response => {
           console.log(response)
           this.setState({isLoading: false, songs: response.data});
         })
         break;
       }
-      case 'angry': {
-        API.angrySongs()
+      case 'happy': {
+        API.calmSongs()
         .then(response => {
           console.log(response)
           this.setState({isLoading: false, songs: response.data});
